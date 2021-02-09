@@ -15,7 +15,7 @@ export default class App extends Component {
 
   getCharacter = () => {
     const { characterList } = this.state;
-    fetch("http://hp-api.herokuapp.com/api/characters/students")
+    fetch("https://hp-api.herokuapp.com/api/characters/students")
       .then((response) => response.json())
       .then((response) => this.setState({ characterList: response }))
       .catch((error) => console.log(error));
@@ -23,7 +23,7 @@ export default class App extends Component {
 
   getChar = () => {
     const { characterList } = this.state;
-    let recWhile = () => {
+    const recWhile = () => {
       let arrayChar = [];
       let count = 0;
       while (count < 3) {
